@@ -4,25 +4,24 @@
 using namespace std;
 
 
-Vector2d::Vector2d(double x1, double x2, double y1, double y2)//описать конструктор с четырьмя параметрами
+Vector2d::Vector2d(double x1, double x2, double y1, double y2)
 {
 	this->x = x2 - x1;
 	this->y = y2 - y1;
 }
 
-Vector2d::Vector2d(double x, double y) // создание вектора с заданными координатами
-{
+Vector2d::Vector2d(double x, double y) 
 	this->x = x; 
 	this->y = y;
 }
 
-Vector2d::Vector2d(const Vector2d & obj)//конструктор копирования
+Vector2d::Vector2d(const Vector2d & obj)
 {
 	this->x = obj.x;
 	this->y = obj.y;
 }
 
-//методы доступа к закрытым полям
+
 void Vector2d::setx(double x)
 {
 	this->x = x;
@@ -43,7 +42,7 @@ double Vector2d::gety()
 	return this->y;
 }
 
-void Vector2d::sum(Vector2d b)//сумма
+void Vector2d::sum(Vector2d b)
 {
 	x = x + b.x;
 	y = y + b.y;
